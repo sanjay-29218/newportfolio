@@ -1,7 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
 import { PhoneIcon, MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
-import { useForm, SubmitHandler } from "react-hook-form";
-import { type } from "os";
 
 type Input = {
   name: string;
@@ -11,24 +9,38 @@ type Input = {
 };
 type Props = {};
 export default function Contact({}: Props) {
-  const { register, handleSubmit ,reset } = useForm<Input>();
-
-  const onSubmit: SubmitHandler<Input> =  async(data) => {
-    const response =  await fetch('https://sanjay-s-website-default-rtdb.firebaseio.com/contact.json',{
+  const [value, setValue] = useState<Input>({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+  const submitdata = async(e) => {
+    e.preventDefault();
+    const res = await fetch('https://sanjay-s-website-default-rtdb.firebaseio.com/contact.json',{
       method:'POST',
-      body:JSON.stringify(data),
+      body:JSON.stringify(value), 
       headers:{
         'Content-Type':'application/json'
-        }
+      }  
         })
-
-    // window.location.href="mailto:sanjay29218@gmail.com?subject={data.subject}&body={data.message}";
+    const data = await res.json();
     console.log(data);
+    alert('Your message has been sent successfully');
+    setValue(
+      {
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      }
+    )
+    
   };
-  
+
   return (
     <div
-      className=" flex relative flex-col pb-[5rem] text-center md:text-left md:flex-row max-w-7xl px-10 
+      className=" flex relative flex-col pb-[8rem] text-center md:text-left md:flex-row max-w-7xl px-10 
         justify-evenly mx-auto items-center"
     >
       <h3 className="absolute top-24 uppercase tracking-[10px] text-gray-500 text-2xl">
@@ -50,41 +62,49 @@ export default function Contact({}: Props) {
           <p className="text-md">sanjay29218@gmail.com</p>
         </div>
         <div className="flex items-center">
-          <MapPinIcon className="text-[#F7A80A] gap-2 h-7 w-7" />
+          <MapPinIcon className="text-[#F7A80A] gap-2 h-7 w-7 animate-pulse" />
           <p className="text-md">Talchikhel,Lalitpur</p>
         </div>
         <form
           method="POST"
-          onSubmit={handleSubmit(onSubmit)}
           className="flex flex-col  gap-2 w-fit 
                 "
+          onSubmit={(e) => submitdata(e)}
         >
           <div className="flex flex-col  gap-2 md:flex-row md:gap-2">
             <input
               className="input"
-              {...register("name")}
               placeholder="Name"
+              autoComplete="off"
               type="text"
+              value={value.name}
+              onChange={(e) => setValue({ ...value, name: e.target.value })}
               required
             />
             <input
               className="input "
-              {...register("email")}
               placeholder="Email"
+              autoComplete="off"
               type="email"
+              value={value.email}
+              onChange={(e) => setValue({ ...value, email: e.target.value })}
               required
             />
           </div>
           <input
             className="input"
-            {...register("subject")}
             placeholder="Subject"
+            value={value.subject}
+            autoComplete="off"
             type="text"
+            onChange={(e) => setValue({ ...value, subject: e.target.value })}
           />
           <textarea
             className="input"
-            {...register("message")}
             placeholder="Message"
+            value={value.message}
+            autoComplete="off"
+            onChange={(e) => setValue({ ...value, message: e.target.value })}
           />
           <button
             type="submit"

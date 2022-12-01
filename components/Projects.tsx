@@ -29,7 +29,7 @@ export default function Projects({}: Props) {
       name: "Music Recommender using Emotion Recognition",
       description:
         "A music recommender system that recommends music based on the emotion of the user.",
-      image: "/music.png",
+      image: "/musicrecommender.png",
       github: "https://github.com/sanjay-29218/FinalYearProjectRemastered",
     },
     
