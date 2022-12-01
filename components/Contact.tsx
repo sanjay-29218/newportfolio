@@ -75,7 +75,7 @@ export default function Contact({}: Props) {
           method="POST"
           className="flex flex-col  gap-2 w-fit 
                 "
-          onSubmit={(e) => submitdata(e)}
+          onSubmit={submitdata}
         >
           <div className="flex flex-col  gap-2 md:flex-row md:gap-2">
             <input
