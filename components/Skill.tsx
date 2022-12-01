@@ -11,7 +11,7 @@ export default function Skill({directionLeft,src,percentage}: Props) {
   return (
     <div className='group relative flex cursor-pointer'>
         <motion.img
-        initial={{x:directionLeft?-100:100,
+        initial={{x:directionLeft?-200:100,
         opacity:0}}
         transition={{duration:1}}
         whileInView={{x:0,opacity:1}}
