@@ -56,7 +56,7 @@ export default function Contact({}: Props) {
         <h4 className="text-2xl font-semibold text-center ">
           Looking for something?
           <div className="decoration-[#F7AB0A]/50 underline  text-center pt-4">
-            Let's Talk
+            Let&apos;s Talk
           </div>
         </h4>
         <div className="flex items-center">

@@ -50,7 +50,7 @@ export default function Projects({}: Props) {
       </h3>
       <div className="relative w-full h-screen  flex overflow-x-scroll scrollbar-thin scrollbar-thumb-amber-300 overflow-y-hidden z-20 snap-x snap-mandatory p-32     ">
         {projects.map((project, index) => (
-          <div className=" w-screen  flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:pd-44 h-screen  ">
+          <div key={project.id} className=" w-screen  flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:pd-44 h-screen  ">
             <motion.img
               initial={{ y: -300, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}

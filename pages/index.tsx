@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <div className='m-0 p-0 bg-gray-600 w-screen overflow-hidden '>  
       <Head>
-        <title>Sanjay's Portfolio</title>
+        <title>Sanjay&apos;s Portfolio</title>
       </Head>
      <Header/>
      {/* Navbar  */}
