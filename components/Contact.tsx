@@ -25,16 +25,22 @@ export default function Contact({}: Props) {
       }  
         })
     const data = await res.json();
-    console.log(data);
-    alert('Your message has been sent successfully');
-    setValue(
-      {
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-      }
-    )
+    if(value.subject&&value.message&&value.email&&value.name){
+      alert('Message sent successfully')
+      setValue(
+        {
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        }
+      )
+  
+    }
+    else{
+      alert('Please fill all the fields')
+    }
+
     
   };
 
