@@ -15,7 +15,7 @@ export default function Contact({}: Props) {
     subject: "",
     message: "",
   });
-  const submitdata = async(e:any) => {
+  const submitdata = async(e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const res = await fetch('https://sanjay-s-website-default-rtdb.firebaseio.com/contact.json',{
       method:'POST',
