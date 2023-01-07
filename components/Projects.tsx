@@ -11,7 +11,7 @@ export default function Projects({}: Props) {
       name: "Daraz Clone",
       description:
         "A FUll Stack Daraz Ecommerce website with the same functionality as the original website.",
-      image: "/linkedin.png",
+      image: "/darazclone.png",
       live: "https://daraz-2-0.vercel.app/",
       github: "https://github.com/sanjay-29218/Daraz-2.0",
     },
