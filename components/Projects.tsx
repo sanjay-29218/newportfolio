@@ -8,6 +8,15 @@ export default function Projects({}: Props) {
   const projects = [
     {
       id: 1,
+      name: "Daraz Clone",
+      description:
+        "A FUll Stack Daraz Ecommerce website with the same functionality as the original website.",
+      image: "/linkedin.png",
+      live: "https://daraz-2-0.vercel.app/",
+      github: "https://github.com/sanjay-29218/Daraz-2.0",
+    },
+    {
+      id: 2,
       name: "LinkedIn Clone",
       description:
         "A clone of the LinkedIn website with the same functionality as the original website.",
@@ -16,7 +25,7 @@ export default function Projects({}: Props) {
       github: "https://github.com/sanjay-29218/LInkedin-clone",
     },
     {
-      id: 2,
+      id: 3,
       name: "Spotify Clone",
       description:
         "A clone of the Spotify website with the same functionality as the original website.",
@@ -25,7 +34,7 @@ export default function Projects({}: Props) {
       // link:"https://spotify-clone-29218.vercel.app/"
     },
     {
-      id: 3,
+      id: 4,
       name: "Music Recommender using Emotion Recognition",
       description:
         "A music recommender system that recommends music based on the emotion of the user.",
