@@ -29,7 +29,7 @@ export default function Projects({}: Props) {
       name: "LinkedIn Clone",
       description:
         "A clone of the LinkedIn website with the same functionality as the original website.",
-      image: "/linkedin.png",
+      image: "/pokemon2.png",
       live: "https://linkedin-clone-6c8d0.web.app/",
       github: "https://github.com/sanjay-29218/LInkedin-clone",
     },
