@@ -17,6 +17,15 @@ export default function Projects({}: Props) {
     },
     {
       id: 2,
+      name: "Pokemon App",
+      description:
+        "A Pokemon App that shows the details of the pokemon and also has a search functionality.",
+      image: "/linkedin.png",
+      live: "https://pokemon-rouge-nine.vercel.app/",
+      github: "https://github.com/sanjay-29218/Pokemon",
+    },
+    {
+      id: 3,
       name: "LinkedIn Clone",
       description:
         "A clone of the LinkedIn website with the same functionality as the original website.",
@@ -25,7 +34,7 @@ export default function Projects({}: Props) {
       github: "https://github.com/sanjay-29218/LInkedin-clone",
     },
     {
-      id: 3,
+      id: 4,
       name: "Spotify Clone",
       description:
         "A clone of the Spotify website with the same functionality as the original website.",
@@ -34,14 +43,13 @@ export default function Projects({}: Props) {
       // link:"https://spotify-clone-29218.vercel.app/"
     },
     {
-      id: 4,
+      id: 5,
       name: "Music Recommender using Emotion Recognition",
       description:
         "A music recommender system that recommends music based on the emotion of the user.",
       image: "/musicrecommender.png",
       github: "https://github.com/sanjay-29218/FinalYearProjectRemastered",
     },
-    
   ];
   return (
     <motion.div
@@ -59,7 +67,10 @@ export default function Projects({}: Props) {
       </h3>
       <div className="relative w-full h-screen  flex overflow-x-scroll scrollbar-thin scrollbar-thumb-amber-300 overflow-y-hidden z-20 snap-x snap-mandatory p-32     ">
         {projects.map((project, index) => (
-          <div key={project.id} className=" w-screen  flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:pd-44 h-screen  ">
+          <div
+            key={project.id}
+            className=" w-screen  flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:pd-44 h-screen  "
+          >
             <motion.img
               initial={{ y: -300, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
@@ -73,7 +84,7 @@ export default function Projects({}: Props) {
                 <span className="underline decoration-[#f7ABBA] ">
                   {index + 1} of {projects.length}:
                 </span>{" "}
-                {project.name}  
+                {project.name}
               </h4>
               <div className="flex items-center justify-center  gap-4 p-5 ">
                 {project.live && (
