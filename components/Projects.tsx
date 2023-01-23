@@ -20,7 +20,7 @@ export default function Projects({}: Props) {
       name: "Pokemon App",
       description:
         "A Pokemon App that shows the details of the pokemon and also has a search functionality.",
-      image: "/linkedin.png",
+      image: "/pokemon2.png",
       live: "https://pokemon-rouge-nine.vercel.app/",
       github: "https://github.com/sanjay-29218/Pokemon",
     },
@@ -29,7 +29,7 @@ export default function Projects({}: Props) {
       name: "LinkedIn Clone",
       description:
         "A clone of the LinkedIn website with the same functionality as the original website.",
-      image: "/pokemon2.png",
+      image: "/linkedin.png",
       live: "https://linkedin-clone-6c8d0.web.app/",
       github: "https://github.com/sanjay-29218/LInkedin-clone",
     },
