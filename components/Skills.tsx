@@ -9,7 +9,7 @@ export default function Skills({}: Props) {
       initial={{ opacity: 0, x: -100 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ delay: 0.5 }}
-      className="h-screen flex  flex-col text-center 
+      className="h-screen w-screen flex  flex-col text-center 
     md:text-left xl: w-screen  xl:px-30 min-h-screen justify-center
     xl:space-y-0 mx-auto items-center"
     >
