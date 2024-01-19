@@ -20,7 +20,7 @@ export default function Projects({}: Props) {
       name: "Pokemon App",
       description:
         "A Pokemon App that shows the details of the pokemon and also has a search functionality.",
-      image: "/pokemon2.png",
+      image: "/poke3.png",
       live: "https://pokemon-rouge-nine.vercel.app/",
       github: "https://github.com/sanjay-29218/Pokemon",
     },
